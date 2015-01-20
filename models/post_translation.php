@@ -9,6 +9,7 @@ class WPML_JSON_API_PostTranslation extends WPML_JSON_API_Translation {
   public $post_id;
   public $post_title;
   public $post_status;
+  public $post_url;
 
   function __construct($post, $translation) {
     parent::__construct($post, $translation);
@@ -16,6 +17,7 @@ class WPML_JSON_API_PostTranslation extends WPML_JSON_API_Translation {
     $this->post_id = $this->resource_id;
     $this->post_status = $translation->post_status;
     $this->post_title = $translation->post_title;
+    $this->post_url = $this->resolve_resource($this->resource_id)->url;
   }
 
   /**
