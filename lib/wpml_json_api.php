@@ -114,7 +114,7 @@ class WPML_JSON_API {
    * Ensures that the plugin dependencies are fulfilled.
    */
   function ensure_plugin_dependencies($network_wide) {
-    if (!is_plugin_active('json-api/json-api.php')) {
+    if (!is_plugin_active('wp-json-api/json-api.php')) {
       trigger_error('This plugin requires JSON-API!', E_USER_ERROR);
     }
 
