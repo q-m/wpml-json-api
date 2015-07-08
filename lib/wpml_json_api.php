@@ -118,7 +118,7 @@ class WPML_JSON_API {
       trigger_error('This plugin requires JSON-API!', E_USER_ERROR);
     }
 
-    if (!is_plugin_active('sitepress-multilingual-cms/sitepress.php')) {
+    if (!is_plugin_active('wpml-multilingual-cms/sitepress.php')) {
       trigger_error('This plugin requires WPML Multilingual CMS!', E_USER_ERROR);
     }
   }
